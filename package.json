@@ -4,7 +4,6 @@
   "description": "Twitter bot built with Node.js",
   "main": "index.js",
   "scripts": {
-    //"start" : "node twit_bot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,6 +12,7 @@
   "author": "Raymond Deng",
   "license": "ISC",
   "dependencies": {
+    "giphy-api": "^1.2.7",
     "twit": "^2.2.9"
   }
 }
