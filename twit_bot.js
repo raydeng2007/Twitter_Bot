@@ -81,8 +81,8 @@ function message(id, text) {
 
 
 function handleFollow(data) {
-
-	message(data.source.id, 'Chirp Chirp!! Thanks for following me! Here\'s a hug to brighten your day!');
+	var id = data.source.id;
+	message(id, 'Chirp Chirp!! Thanks for following me! Here\'s a hug to brighten your day!');
 	giphy.translate('virtual hug', function(err, res) {
 		if (err) {
 			console.log(err);
@@ -91,6 +91,10 @@ function handleFollow(data) {
 		var gifUrl = res.data.bitly_url;
 		message(data.source.id, gifUrl)
 	});
+	message(id, 'If you want to turn your tweet into a gif, simply @tweetygifbot plus the sentence/ phrase you want to see turn'+ 
+		' into a gif and I\'ll tweet it! If you have any suggestions or new features you like to see, feel free to hop in my DM' +
+		'my creater will check my DM regularly for feedback. If you would like to contribute to this bot, all PRs are welcome and'+
+		'a link can be found on my github page. Link in my bio. Happy Tweeting Chirp Chirp!!')
 
 }
 
